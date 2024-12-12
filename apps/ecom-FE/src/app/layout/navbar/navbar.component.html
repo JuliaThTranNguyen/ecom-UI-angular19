@@ -8,52 +8,56 @@
       </a>
     </div>
   </div>
-  <div class="navbar-center flex">
+  <div class="navbar-center flex flex-row">
     <div class="menu menu-sm sm:menu-lg menu-horizontal px-1">
-      <li><a href="/">Home</a></li>
-      <li>
-        <details #allProductsMenu>
-          <summary>Products</summary>
-          <ul class="z-30">
-            <li><a href="/product">View all</a></li>
-            <li><a href="/category">Category</a></li>
-          </ul>
-        </details>
-      </li>
+      <ul class="flex flex-row space-x-4">
+        <li><a href="/">Home</a></li>
+        <li>
+          <details #allProductsMenu>
+            <summary>Products</summary>
+            <ul class="z-30">
+              <li><a href="/product">View all</a></li>
+              <li><a href="/category">Category</a></li>
+            </ul>
+          </details>
+        </li>
 
-      <li>
-        <details #adminMenu>
-          <summary>Profile</summary>
-          <ul class="z-30">
-            <li><a href="/profile">Admin profile</a></li>
-            <li><a href="/other_profiles">Other Profiles</a></li>
-          </ul>
-        </details>
-      </li>
+        <li>
+          <details #adminMenu>
+            <summary>Profile</summary>
+            <ul class="z-30">
+              <li><a href="/profile">Admin profile</a></li>
+              <li><a href="/other_profiles">Other Profiles</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
     </div>
-
   </div>
-  <div class="navbar-end pe-4 flex align-items-center">
-    
-    <div class="dropdown dropdown-end pe-4" routerLink="/cart">
-        <div tabindex="0" role="button">
-<fa-icon [icon]="['fas', 'cart-shopping']" class="menu-icon" ></fa-icon>
-        </div>
-    </div>
-    <div class="dropdown dropdown-end me-2 " routerLink="/profile">
-        <div tabindex="0" role="button">
-<fa-icon [icon]="['far', 'user']" class="menu-icon" ></fa-icon>
-        </div>
-        <ul class="dropdown-content menu menu-lg bg-base-100 rounded-box z-10 w-50 p-2 shadow">
-            <li>
-                <button class="link">Login</button>
-            </li>
-            <li>
-                <button class="link">Signup</button>
-            </li>
-        </ul>
-    </div>
-    
-</div>
 
+  <div class="navbar-end pe-4 flex align-items-center">
+    <div class="dropdown dropdown-end pe-4" routerLink="/cart">
+      <div tabindex="0" role="button" aria-label="Cart">
+        <fa-icon [icon]="['fas', 'cart-shopping']" class="menu-icon"></fa-icon>
+        <!-- Cart Item Count Badge -->
+        <span class="badge badge-sm bg-indigo-500 absolute bottom-8 right-2 transform translate-x-2 translate-y-1 text-white ">
+          1
+        </span>
+      </div>
+    </div>
+
+    <div class="dropdown dropdown-end me-2 ml-5" routerLink="/profile">
+      <div tabindex="0" role="button" aria-label="User">
+        <fa-icon [icon]="['far', 'user']" class="menu-icon"></fa-icon>
+      </div>
+      <ul class="dropdown-content menu menu-lg bg-base-100 rounded-box z-10 w-50 p-2 shadow">
+        <li>
+          <button class="link">Login</button>
+        </li>
+        <li>
+          <button class="link">Signup</button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
